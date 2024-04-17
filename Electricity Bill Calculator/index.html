@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+ <title>Eb bill calculator</title>
+</head>
+<body>
+    <div class="container">
+    <div id="wrapper">
+        <h2> EB Bill Calculator</h2>
+        <div class = "inputdiv">
+            <input type="number" id="input" placeholder="Enter the readings">
+         </div>
+         <div>
+            <button type="submit" onclick="convert()">Bill amount
+            </button>
+         </div>
+         <div id="result">
+         </div>
+    </div>
+</div>
+    <script>
+        function convert(){
+        let units =document.getElementById("input").value
+        // let rate=0 or free If the units consumed are less than or equal to 100, the rate is zero for the first 100 units.
+       if(units<=100){
+            rate = units*0
+        } 
+        // 101 to 200 = 2.25rs
+         else if(units>100 && units<=200){
+            rate=0+(units-100)*2.25
+         }
+        //  201 to 400 = 4.50rs
+         else if(units>200 && units<=400){
+         rate=225+(units-200)*4.5
+         }
+        //  401 to 500 =6rs
+         else if(units>400 && units<=500){
+         rate=1125+(units-400)*6
+         }
+         else
+         alert('Enter the readings below 500')
+         let result = document.getElementById("result")
+        result.innerHTML = 'Your rate = RS. '+ rate.toFixed(2)
+      
+        }
+    </script>
+  
+</body>
+</html>
