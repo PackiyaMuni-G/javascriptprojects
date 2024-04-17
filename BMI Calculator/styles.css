@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 100%;
+}
+
+#error-msg {
+    margin-top: 10px;
+    font-size: 12px;
+}
